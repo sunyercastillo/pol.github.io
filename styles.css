@@ -271,6 +271,13 @@ body {
     text-decoration: underline;
 }
 
+.loading-publications {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+}
+
 /* Google Scholar Sidebar */
 .scholar-sidebar {
     position: sticky;
