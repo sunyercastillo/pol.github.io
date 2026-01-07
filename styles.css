@@ -173,6 +173,9 @@ body {
     width: 100%;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    filter: none;
+    opacity: 1;
+    background: transparent;
 }
 
 .about-text h3 {
