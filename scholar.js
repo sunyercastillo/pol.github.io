@@ -21,18 +21,17 @@ function createPublicationHTML(title, authors, venue, year, link) {
 const publications = [
     {
         title: "REE ultra-rich karst bauxite deposits in the Pedernales Peninsula, Dominican Republic: Mineralogy of REE phosphates and carbonates",
-        authors: "Cristina Villanova-de-Benavent, Joaquín A Proenza, Lisard Torró, Thomas Aiglsperger, Cristina Domènech, Diego Domínguez-Carretero, Xavier Llovet, Pol Suñer, Jesús Rodríguez",
-        venue: "Ore Geology Reviews",
+        authors: "Cristina Villanova-de-Benavent and Joaquín A Proenza and Lisard Torró and Thomas Aiglsperger and Cristina Domènech and Diego Domínguez-Carretero and Xavier Llovet and Pol Suñer and Jesús Rodríguez",
+        venue: "Unknown",
         year: "2023",
-        link: "https://scholar.google.es/citations?view_op=view_citation&hl=es&user=ULBrgQcAAAAJ&citation_for_view=ULBrgQcAAAAJ:u5HHmVD_uO8C"
+        link: "https://www.sciencedirect.com/science/article/pii/S0169136823001373"
     },
-    // Add more publications here
 ];
 
 // Citation data by year (update with your actual data from Google Scholar)
 const citationData = {
     years: [2023, 2024, 2025],
-    citations: [2, 4, 2]  // Update these numbers with your actual citations per year
+    citations: [2, 2, 13]
 };
 
 // Function to create citation graph
