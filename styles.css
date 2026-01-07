@@ -202,7 +202,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Timeline Section */
+/* Timeline Section - Horizontal Layout */
 .timeline {
     position: relative;
     display: flex;
