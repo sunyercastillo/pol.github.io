@@ -12,13 +12,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background on scroll
+// Navbar show/hide on scroll with smart behavior
 const navbar = document.querySelector('.navbar');
+let lastScrollY = window.scrollY;
+let ticking = false;
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-    } else {
-        navbar.style.background = '#ffffff';
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const currentScrollY = window.scrollY;
+            
+            // Add scrolled class when past hero section
+            if (currentScrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Hide navbar when scrolling down, show when scrolling up
+            if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                // Scrolling down
+                navbar.classList.add('hidden');
+            } else {
+                // Scrolling up
+                navbar.classList.remove('hidden');
+            }
+            
+            lastScrollY = currentScrollY;
+            ticking = false;
+        });
+        ticking = true;
     }
 });
 
