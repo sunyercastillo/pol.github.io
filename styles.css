@@ -205,14 +205,34 @@ body {
 /* Timeline Section - Horizontal Layout */
 .timeline {
     position: relative;
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important;
     align-items: flex-start;
     overflow-x: auto;
+    overflow-y: hidden;
     padding: 3rem 2rem;
     gap: 3rem;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
+    white-space: nowrap;
+}
+
+.timeline::-webkit-scrollbar {
+    height: 8px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.timeline::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .timeline::before {
@@ -229,7 +249,7 @@ body {
 .timeline-item {
     position: relative;
     flex-shrink: 0;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
     width: 220px;
