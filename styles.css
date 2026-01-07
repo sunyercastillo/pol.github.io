@@ -204,7 +204,7 @@ body {
 /* Timeline Section */
 .timeline {
     position: relative;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 1rem 0;
 }
@@ -212,53 +212,95 @@ body {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--secondary-color);
+    background: #000;
 }
 
 .timeline-item {
     position: relative;
-    padding-left: 50px;
-    margin-bottom: 1.2rem;
+    width: 50%;
+    padding: 0 30px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+/* Left side items (1st, 2nd, 3rd, 4th, 5th) */
+.timeline-item:nth-child(10n+1),
+.timeline-item:nth-child(10n+2),
+.timeline-item:nth-child(10n+3),
+.timeline-item:nth-child(10n+4),
+.timeline-item:nth-child(10n+5) {
+    left: 0;
+    text-align: right;
+}
+
+/* Right side items (6th, 7th, 8th, 9th, 10th) */
+.timeline-item:nth-child(10n+6),
+.timeline-item:nth-child(10n+7),
+.timeline-item:nth-child(10n+8),
+.timeline-item:nth-child(10n+9),
+.timeline-item:nth-child(10n) {
+    left: 50%;
+    text-align: left;
 }
 
 .timeline-marker {
     position: absolute;
-    left: 13px;
     top: 5px;
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: var(--white);
-    border: 2px solid var(--secondary-color);
+    border: 2px solid #000;
     z-index: 1;
+}
+
+/* Marker position for left items */
+.timeline-item:nth-child(10n+1) .timeline-marker,
+.timeline-item:nth-child(10n+2) .timeline-marker,
+.timeline-item:nth-child(10n+3) .timeline-marker,
+.timeline-item:nth-child(10n+4) .timeline-marker,
+.timeline-item:nth-child(10n+5) .timeline-marker {
+    right: -6px;
+}
+
+/* Marker position for right items */
+.timeline-item:nth-child(10n+6) .timeline-marker,
+.timeline-item:nth-child(10n+7) .timeline-marker,
+.timeline-item:nth-child(10n+8) .timeline-marker,
+.timeline-item:nth-child(10n+9) .timeline-marker,
+.timeline-item:nth-child(10n) .timeline-marker {
+    left: -6px;
 }
 
 .timeline-content {
     background: var(--white);
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
     box-shadow: var(--shadow);
     transition: transform 0.3s;
+    display: inline-block;
+    max-width: 250px;
 }
 
 .timeline-content:hover {
-    transform: translateX(5px);
+    transform: scale(1.05);
 }
 
 .timeline-date {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--secondary-color);
     font-weight: bold;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
 }
 
 .timeline-content h3 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .timeline-link {
