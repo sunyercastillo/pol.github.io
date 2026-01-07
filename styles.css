@@ -169,20 +169,26 @@ body {
     width: 100%;
     position: relative;
     overflow: visible;
+    background: none !important;
 }
 
 .profile-image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     filter: none !important;
     opacity: 1 !important;
-    background: transparent !important;
+    background: #fff !important;
+    background-color: #fff !important;
     -webkit-filter: none !important;
     display: block;
     object-fit: cover;
-    image-rendering: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
     mix-blend-mode: normal !important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .about-text h3 {
