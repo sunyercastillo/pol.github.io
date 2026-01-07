@@ -369,11 +369,6 @@ body {
     max-height: 200px;
     width: 100% !important;
 }
-    min-height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 /* Contact Section */
 .contact-links {
