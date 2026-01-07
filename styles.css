@@ -262,14 +262,15 @@ body {
 }
 
 .timeline-marker {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #555;
-    border: none;
-    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4), inset 2px 2px 4px rgba(255,255,255,0.4);
+    width: auto;
+    height: auto;
+    font-size: 24px;
     z-index: 1;
     margin-bottom: 1.5rem;
+}
+
+.timeline-marker::before {
+    content: '🪨';
 }
 
 .timeline-content {
