@@ -167,6 +167,8 @@ body {
 
 .profile-image {
     width: 100%;
+    position: relative;
+    overflow: visible;
 }
 
 .profile-image img {
@@ -177,6 +179,10 @@ body {
     opacity: 1 !important;
     background: transparent !important;
     -webkit-filter: none !important;
+    display: block;
+    object-fit: cover;
+    image-rendering: auto;
+    mix-blend-mode: normal !important;
 }
 
 .about-text h3 {
