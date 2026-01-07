@@ -361,13 +361,14 @@ body {
     margin-top: 1rem;
 }
 
-.graph-placeholder {
-    background: var(--light-bg);
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    color: #666;
-    font-size: 0.9rem;
+.citation-graph h4 {
+    margin-bottom: 1rem;
+}
+
+#citationChart {
+    max-height: 200px;
+    width: 100% !important;
+}
     min-height: 200px;
     display: flex;
     align-items: center;

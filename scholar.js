@@ -29,6 +29,69 @@ const publications = [
     // Add more publications here
 ];
 
+// Citation data by year (update with your actual data from Google Scholar)
+const citationData = {
+    years: [2023, 2024, 2025],
+    citations: [2, 4, 2]  // Update these numbers with your actual citations per year
+};
+
+// Function to create citation graph
+function createCitationGraph() {
+    const canvas = document.getElementById('citationChart');
+    
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: citationData.years,
+            datasets: [{
+                label: 'Citations',
+                data: citationData.citations,
+                backgroundColor: 'rgba(52, 152, 219, 0.6)',
+                borderColor: 'rgba(52, 152, 219, 1)',
+                borderWidth: 2,
+                borderRadius: 5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.parsed.y + ' citations';
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1,
+                        precision: 0
+                    },
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.05)'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+}
+
 // Option 2: Use Google Scholar embed (if available)
 function loadPublications() {
     const publicationsList = document.getElementById('publications-list');
@@ -63,7 +126,11 @@ function loadPublications() {
 
 // Load publications when DOM is ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadPublications);
+    document.addEventListener('DOMContentLoaded', () => {
+        loadPublications();
+        createCitationGraph();
+    });
 } else {
     loadPublications();
+    createCitationGraph();
 }
