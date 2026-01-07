@@ -1,0 +1,35 @@
+name: Update Google Scholar Data
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-scholar:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          pip install scholarly beautifulsoup4 requests
+          
+      - name: Fetch Google Scholar data
+        run: |
+          python3 scripts/update_scholar_data.py
+          
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Google Scholar data [skip ci]" && git push)
