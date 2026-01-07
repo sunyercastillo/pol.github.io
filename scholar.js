@@ -24,7 +24,7 @@ const publications = [
         authors: "Cristina Villanova-de-Benavent and Joaquín A Proenza and Lisard Torró and Thomas Aiglsperger and Cristina Domènech and Diego Domínguez-Carretero and Xavier Llovet and Pol Suñer and Jesús Rodríguez",
         venue: "Ore Geology Reviews",
         year: "2023",
-        link: "https://scholar.google.es/citations?view_op=view_citation&hl=es&user=ULBrgQcAAAAJ&citation_for_view=ULBrgQcAAAAJ:u5HHmVD_uO8C"
+        link: "https://doi.org/10.1016/j.oregeorev.2023.105422"
     },
 ];
 
