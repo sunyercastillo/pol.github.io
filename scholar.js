@@ -22,9 +22,9 @@ const publications = [
     {
         title: "REE ultra-rich karst bauxite deposits in the Pedernales Peninsula, Dominican Republic: Mineralogy of REE phosphates and carbonates",
         authors: "Cristina Villanova-de-Benavent and Joaquín A Proenza and Lisard Torró and Thomas Aiglsperger and Cristina Domènech and Diego Domínguez-Carretero and Xavier Llovet and Pol Suñer and Jesús Rodríguez",
-        venue: "Unknown",
+        venue: "Ore Geology Reviews",
         year: "2023",
-        link: "https://www.sciencedirect.com/science/article/pii/S0169136823001373"
+        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ULBrgQcAAAAJ&citation_for_view=ULBrgQcAAAAJ:u5HHmVD_uO8C"
     },
 ];
 

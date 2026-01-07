@@ -1,13 +1,13 @@
-name: Update Google Scholar Citations
+name: Update Google Scholar Publications
 
 on:
   schedule:
-    # Run daily at 2 AM UTC
-    - cron: '0 2 * * *'
+    # Run monthly on the 1st at 3 AM UTC
+    - cron: '0 3 1 * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
-  update-scholar:
+  update-publications:
     runs-on: ubuntu-latest
     
     steps:
@@ -23,13 +23,13 @@ jobs:
         run: |
           pip install scholarly beautifulsoup4 requests
           
-      - name: Fetch Google Scholar citation data
+      - name: Fetch Google Scholar publications
         run: |
-          python3 scripts/update_scholar_citations.py
+          python3 scripts/update_scholar_data.py
           
       - name: Commit and push if changed
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Google Scholar citations [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Google Scholar publications [skip ci]" && git push)
