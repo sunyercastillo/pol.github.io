@@ -98,8 +98,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(52, 152, 219, 0.8) 100%), 
-                url('images/background.jpg') center/cover no-repeat;
+    background: url('images/background.jpg') center/cover no-repeat;
     color: var(--white);
     text-align: center;
     position: relative;
@@ -112,7 +111,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(80, 80, 80, 0.3);
     z-index: 1;
 }
 
@@ -339,12 +338,17 @@ body {
 
 .stat-item {
     text-align: center;
+    padding: 0.5rem;
+    background: var(--light-bg);
+    border-radius: 8px;
 }
 
 .stat-number {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.25rem;
 }
 
 .stat-label {
