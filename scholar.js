@@ -20,11 +20,11 @@ function createPublicationHTML(title, authors, venue, year, link) {
 // Option 1: Manual publication list (recommended for reliability)
 const publications = [
     {
-        title: "Your Publication Title",
-        authors: "Author 1, Author 2, P. Suñer-Castillo",
-        venue: "Journal Name",
-        year: "2024",
-        link: "https://doi.org/your-doi"
+        title: "REE ultra-rich karst bauxite deposits in the Pedernales Peninsula, Dominican Republic: Mineralogy of REE phosphates and carbonates",
+        authors: "Cristina Villanova-de-Benavent, Joaquín A Proenza, Lisard Torró, Thomas Aiglsperger, Cristina Domènech, Diego Domínguez-Carretero, Xavier Llovet, Pol Suñer, Jesús Rodríguez",
+        venue: "Ore Geology Reviews",
+        year: "2023",
+        link: "https://scholar.google.es/citations?view_op=view_citation&hl=es&user=ULBrgQcAAAAJ&citation_for_view=ULBrgQcAAAAJ:u5HHmVD_uO8C"
     },
     // Add more publications here
 ];
