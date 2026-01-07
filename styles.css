@@ -98,6 +98,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #4a5568;
     background: url('images/background.jpg') center/cover no-repeat;
     color: var(--white);
     text-align: center;
