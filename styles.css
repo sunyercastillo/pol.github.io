@@ -98,7 +98,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../images/background.jpg') center/cover no-repeat;
+    background: url('images/background.jpg') center/cover no-repeat;
     color: var(--white);
     text-align: center;
     position: relative;
@@ -206,20 +206,22 @@ body {
 .timeline {
     position: relative;
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
     overflow-x: auto;
-    padding: 3rem 1rem;
-    gap: 2rem;
+    padding: 3rem 2rem;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 2px;
+    left: 2rem;
+    right: 2rem;
+    top: 60px;
+    height: 3px;
     background: #000;
     z-index: 0;
 }
@@ -230,24 +232,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 200px;
+    width: 220px;
 }
 
 .timeline-marker {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background: #555;
     border: none;
-    box-shadow: inset -2px -2px 3px rgba(0,0,0,0.3), inset 2px 2px 3px rgba(255,255,255,0.3);
+    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4), inset 2px 2px 4px rgba(255,255,255,0.4);
     z-index: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .timeline-content {
     background: var(--white);
-    padding: 0.6rem 0.8rem;
-    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
     box-shadow: var(--shadow);
     transition: transform 0.3s;
     text-align: center;
@@ -255,19 +257,19 @@ body {
 }
 
 .timeline-content:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 
 .timeline-date {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: var(--secondary-color);
     font-weight: bold;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.4rem;
 }
 
 .timeline-content h3 {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .timeline-link {
